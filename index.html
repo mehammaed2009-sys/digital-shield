@@ -1,65 +1,134 @@
+
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>DIGITAL SHIELD - الدرع الرقمي</title>
-  <style>
-     body {  
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #081525;
-            color: white;
-            text-align: center;
-        }
-        header {
-            padding: 25px;
-            background: #102b46;
-        }
-        h1 {
-            color: #35d6c0;
-            font-size: 36px;
-        }
-        main {
-            padding: 60px 20px;
-        }
-        p {
-            font-size: 19px;
-            line-height: 1.8;
-        }
-        .btn {
-            display: inline-block;
-            padding: 14px 28px;
-            background: #16a995;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-        }
-        footer {
-            padding: 20px;
-            color: #aaa;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DARK KNIGHT - فارس الظلام</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #081525;
+  color: #fff;
+}
+header {
+  background: #102b46;
+  padding: 25px;
+  text-align: center;
+  border-bottom: 2px solid #35d6c0;
+}
+header h1 {
+  color: #35d6c0;
+  margin: 0;
+  letter-spacing: 2px;
+}
+header p { color: #c5d5e3; }
+.container {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 15px;
+}
+.status {
+  background: #10334a;
+  border: 1px solid #35d6c0;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+.status h2 { color: #35d6c0; }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
+.card {
+  background: #102b46;
+  padding: 22px;
+  border-radius: 12px;
+  border: 1px solid #244a65;
+  text-align: center;
+}
+.card h3 { color: #35d6c0; }
+button {
+  background: #16a995;
+  color: #081525;
+  border: 0;
+  border-radius: 8px;
+  padding: 12px 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+button:hover { background: #35d6c0; }
+#message {
+  margin-top: 22px;
+  padding: 15px;
+  background: #10334a;
+  border-radius: 10px;
+  text-align: center;
+  color: #35d6c0;
+}
+footer {
+  text-align: center;
+  color: #9db2c4;
+  padding: 25px;
+}
+</style>
 </head>
 <body>
-    <header>
-        <h1>🛡️ DIGITAL SHIELD</h1>
-        <p>الدرع الرقمي لحماية عالمك الإلكتروني</p>
-    </header>
 
-    <main>
-        <h2>مرحباً بك في الدرع الرقمي</h2>
-        <p>
-            منصة تهدف إلى مساعدتك على تصفح الإنترنت
-            بوعي وأمان، وحماية معلوماتك الرقمية.
-        </p>
-        <a class="btn" href="#">اكتشف خدماتنا</a>
-        <p>قريباً: فحص الروابط والتنبيهات الأمنية.</p>
-    </main>
+<header>
+  <h1>DARK KNIGHT</h1>
+  <p>فارس الظلام - حارسك في العالم الرقمي</p>
+</header>
 
-    <footer>
-        DIGITAL SHIELD © 2026
-        <p>هذه نسخة تجريبية وليست برنامج حماية فعلياً.</p>
-    </footer>
+<main class="container">
+  <section class="status">
+    <h2>🛡️ مرحباً بك في مركز الحماية</h2>
+    <p>منظومة الحماية والذكاء الرقمي</p>
+    <p>حالة النظام: النموذج الأولي يعمل</p>
+  </section>
+
+  <section class="grid">
+    <div class="card">
+      <h3>🔍 الفحص الأمني</h3>
+      <p>واجهة خدمة فحص الملفات</p>
+      <button onclick="showMessage('الفحص الأمني: هذه نسخة تجريبية')">فتح الخدمة</button>
+    </div>
+
+    <div class="card">
+      <h3>🤖 جعفر AI</h3>
+      <p>مساعدك الذكي والودود</p>
+      <button onclick="showMessage('مرحباً! أنا جعفر، مساعدك الذكي')">التحدث مع جعفر</button>
+    </div>
+
+    <div class="card">
+      <h3>🔐 بالكبير GUARD</h3>
+      <p>الحارس التقني</p>
+      <button onclick="showMessage('أنا بالكبير، حارسك التقني')">فتح الحارس</button>
+    </div>
+
+    <div class="card">
+      <h3>🌐 حماية الإنترنت</h3>
+      <p>إعدادات السلامة الرقمية</p>
+      <button onclick="showMessage('خدمة حماية الإنترنت قيد التطوير')">فتح الخدمة</button>
+    </div>
+  </section>
+
+  <div id="message">أهلاً بك في DARK KNIGHT</div>
+</main>
+
+<footer>
+  العلم سلاحنا، والحماية رسالتنا © DARK KNIGHT
+</footer>
+
+<script>
+function showMessage(message) {
+  document.getElementById("message").textContent = message;
+}
+</script>
+
 </body>
 </html>
