@@ -173,26 +173,12 @@ function startVoice() {
   recognition.onresult = function(event) {
     document.getElementById("question").value =
       event.results[0][0].transcript;
-    document.getElementById("voiceStatus").textContent =
-      "تم التعرف على كلامك. اضغط إرسال.";
   };
 
   recognition.onerror = function() {
     document.getElementById("voiceStatus").textContent =
-      "تعذر التعرف على الصوت. يمكنك الكتابة بدلاً من ذلك.";
+      "لم أتمكن من سماع صوتك، حاول مجدداً.";
   };
 
   recognition.start();
-  document.getElementById("voiceStatus").textContent =
-    "جعفر يستمع إليك...";
 }
-
-function stopVoice() {
-  if (recognition) recognition.stop();
-  document.getElementById("voiceStatus").textContent =
-    "تم إيقاف الاستماع.";
-}
-</script>
-
-</body>
-</html>
